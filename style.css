@@ -2,17 +2,81 @@
   --desaturated-red: hsl(0, 36%, 70%);
   --soft-red: hsl(0, 93%, 68%);
   --dark-grayish-red: hsl(0, 6%, 24%);
-  --background-initial: background: white;
-  --background-gradient-one: background: linear-gradient 135deg, hsl(0, 0%, 100%), 135deg, hsl(0, 100%, 98%);
-  --background-gradient-two: background: linear-gradient 135deg, hsl(0, 80%, 86%), 135deg, hsl(0, 74%, 74%);
   --font-size-body: 16px;
   --font-family-body: "Josefin Sans", sans-serif;
 }
 
 body {
+  background-image: url("images/bg-pattern-desktop.svg");
+  object-fit: cover;
+  /*overflow-y: hidden;*/
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
   background-color: var(--background-gradient-one);
+  margin-left: 150px;
+}
+body header {
+  margin-top: 50px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero-title h1 {
+  margin-top: 150px;
+  width: 600px;
+  font-size: 100px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.hero .hero-title h1 span {
+  color: var(--desaturated-red);
+  font-weight: 200;
+}
+.hero .img-hero {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.hero .img-hero img {
+  width: 721px;
+}
+.hero .hero-paragraph {
+  width: 590px;
+  color: var(--desaturated-red);
+  line-height: 250%;
+  font-size: 22px;
+}
+.hero .hero-paragraph input {
+  margin-top: 25px;
+  width: 550px;
+  padding: 20px 25px;
+  border-radius: 30px;
+  border: 1px solid var(--desaturated-red);
+  outline: none;
+  color: var(--desaturated-red);
+  font-weight: 600;
+  z-index: 5;
+}
+.hero .hero-paragraph button {
+  background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  padding: 17px 45px;
+  border-radius: 30px;
+  position: absolute;
+  left: 651px;
+  top: 771px;
+  z-index: 0;
+}
+.hero .hero-paragraph button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  margin-top: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */
