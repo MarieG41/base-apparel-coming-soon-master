@@ -1,0 +1,16 @@
+:root {
+--desaturated-red: hsl(0, 36%, 70%);
+--soft-red: hsl(0, 93%, 68%);
+--dark-grayish-red: hsl(0, 6%, 24%);
+--background-initial: background: white;
+--background-gradient-one: background: linear-gradient 135deg, hsl(0, 0%, 100%), 135deg, hsl(0, 100%, 98%);
+--background-gradient-two: background: linear-gradient 135deg, hsl(0, 80%, 86%), 135deg, hsl(0, 74%, 74%);
+--font-size-body: 16px;
+--font-family-body: 'Josefin Sans', sans-serif;
+}
+
+body{
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    background-color: var(--background-gradient-one);
+}
