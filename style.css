@@ -1,3 +1,10 @@
+/**
+* SassQueries
+* Manage media-queries in Sass easily.
+*
+* @author     Samuel Marchal (zessx)
+* @version    0.3
+*/
 :root {
   --desaturated-red: hsl(0, 36%, 70%);
   --soft-red: hsl(0, 93%, 68%);
@@ -9,22 +16,58 @@
 body {
   background-image: url("images/bg-pattern-desktop.svg");
   object-fit: cover;
-  /*overflow-y: hidden;*/
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
   background-color: var(--background-gradient-one);
   margin-left: 150px;
 }
+@media all and (max-width: 991px) {
+  body {
+    width: 350px;
+    margin-left: 0;
+    background-image: none;
+    object-fit: none;
+  }
+}
 body header {
   margin-top: 50px;
+}
+@media all and (max-width: 991px) {
+  body header {
+    margin: 25px 0 25px 25px;
+  }
+  body header img {
+    width: 30%;
+  }
+}
+body footer {
+  margin-top: 50px;
+  margin-right: 1100px;
+  font-size: 12px;
+}
+@media all and (max-width: 991px) {
+  body footer {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    width: 200px;
+  }
 }
 
 .hero {
   display: flex;
   flex-direction: column;
 }
+.hero .img-hero-mobile .hero-mobile {
+  display: none;
+}
+@media all and (max-width: 991px) {
+  .hero .img-hero-mobile .hero-mobile {
+    display: block;
+  }
+}
 .hero .hero-title h1 {
-  margin-top: 150px;
+  margin-top: 100px;
   width: 600px;
   font-size: 100px;
   font-weight: 400;
@@ -34,6 +77,14 @@ body header {
   color: var(--desaturated-red);
   font-weight: 200;
 }
+@media all and (max-width: 991px) {
+  .hero .hero-title h1 {
+    text-align: center;
+    font-size: 50px;
+    width: 330px;
+    margin-left: 20px;
+  }
+}
 .hero .img-hero {
   display: flex;
   justify-content: end;
@@ -41,8 +92,13 @@ body header {
   right: 0;
   top: 0;
 }
-.hero .img-hero img {
-  width: 721px;
+.hero .img-hero .hero-desktop {
+  width: 720.5px;
+}
+@media all and (max-width: 991px) {
+  .hero .img-hero {
+    display: none;
+  }
 }
 .hero .hero-paragraph {
   width: 590px;
@@ -50,16 +106,50 @@ body header {
   line-height: 250%;
   font-size: 22px;
 }
+@media all and (max-width: 991px) {
+  .hero .hero-paragraph {
+    margin-top: 15px;
+    margin-left: 50px;
+    font-size: 16px;
+    width: 260px;
+    text-align: center;
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .hero .hero-paragraph input {
-  margin-top: 25px;
+  margin-top: 15px;
   width: 550px;
   padding: 20px 25px;
   border-radius: 30px;
-  border: 1px solid var(--desaturated-red);
+  border: 2px solid var(--desaturated-red);
   outline: none;
   color: var(--desaturated-red);
   font-weight: 600;
-  z-index: 5;
+}
+@media all and (max-width: 991px) {
+  .hero .hero-paragraph input {
+    margin-top: 45px;
+    width: 230px;
+  }
+}
+.hero .hero-paragraph input::placeholder {
+  color: var(--desaturated-red);
+  font-family: "Josefin Sans", sans-serif;
+}
+.hero .hero-paragraph .img-error {
+  display: none;
+  position: absolute;
+  top: 685px;
+  left: 600px;
+}
+@media all and (max-width: 991px) {
+  .hero .hero-paragraph .img-error {
+    top: 770px;
+    left: 210px;
+  }
 }
 .hero .hero-paragraph button {
   background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -68,15 +158,34 @@ body header {
   border-radius: 30px;
   position: absolute;
   left: 651px;
-  top: 771px;
+  top: 667.5px;
   z-index: 0;
 }
-.hero .hero-paragraph button:hover {
-  opacity: 0.8;
+@media all and (max-width: 991px) {
+  .hero .hero-paragraph button {
+    left: 240px;
+    top: 755px;
+    padding: 17px 35px;
+  }
 }
-
-footer {
-  margin-top: 90px;
+.hero .hero-paragraph button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.hero .hero-paragraph button:active {
+  background: hsl(0, 80%, 86%);
+  width: 110px;
+  height: 65px;
+  top: 666px;
+  opacity: 1;
+  cursor: pointer;
+}
+@media all and (max-width: 991px) {
+  .hero .hero-paragraph button:active {
+    top: 750px;
+    left: 235px;
+    width: 90px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
